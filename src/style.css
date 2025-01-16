@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+form{
+    input{
+        border: 1px solid gray;
+        border-radius: 5px;
+        padding: 5px 10px;
+    }
+
+    input:focus{
+        outline: none;
+    }
+}
+
+body {
+    background-color: #f6fafd;
+}
+
+.dynamic-table{
+    border: 1px solid black;
+
+    th,td{
+        border: 1px solid black;
+        padding: 10px;
+        text-align: left;
+    }
+
+    input{
+        border: 1px solid gray;
+        outline: none;
+        padding: 5px;
+        border-radius: 5px;
+    }
+    
+
+
+}
