@@ -14,5 +14,5 @@ If you want to run locally you need to fire these command
 3) cd project_directory
 4) npm run dev (for run locally)
 
-I am working professional that's that's why i am not able to implement all feature and ui which you have provided me.
-Sorry for this
+I am working professional that's that's why i am not able to implement all feature and make ui same which you have provided me.
+Sorry for this. So please consider this.
