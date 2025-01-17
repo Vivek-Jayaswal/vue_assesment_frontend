@@ -30,7 +30,7 @@
                 <div class="p-3 flex justify-between bg-white items-center shadow shadow-gray-400">
                     <h2>Invoice List</h2>
                     <div class="border border-gray-950 p-1 rounded-2xl">
-                        <v-icon class="text-gray-600 px-4">mdi-magnify</v-icon>
+                        <v-icon class="text-gray-600">mdi-magnify</v-icon>
                         <input type="text" class="focus:outline-none" placeholder="Search" name="" id="">
                     </div>
                 </div>
@@ -69,7 +69,7 @@
                 </div>
 
                 <!-- Invoice List -->
-                <div v-if="invoices.length">
+                <div v-if="invoices.length" class="py-5">
                     <div v-for="invoice in invoices" :key="invoice.id" class="border p-4 my-2 shadow-sm">
                         <h3>Invoice #{{ invoice.invoiceNumber }}</h3>
                         <p><strong>Company:</strong> {{ invoice.companyData.companyName }}</p>
@@ -161,6 +161,7 @@ export default {
         async fetchInvoices() {
             try {
                 const response = await axios.get("https://node-backend-446i.onrender.com/get-all-data", { withCredentials: true });
+                // const response = await axios.get("http://localhost:8000/get-all-data", { withCredentials: true });
                 console.log(response.data.data);
 
                 if (response.data.data.length > 0) {
@@ -179,6 +180,7 @@ export default {
             try {
                 const response = await axios.post(
                     "https://node-backend-446i.onrender.com/auth/logout",
+                    // "http://localhost:8000/auth/logout",
                     {},
                     { withCredentials: true }
                 );

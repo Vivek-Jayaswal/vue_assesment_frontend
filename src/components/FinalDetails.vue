@@ -62,7 +62,6 @@
             <button @click="handlefinalStep"
                 class="bg-blue-600 px-6 rounded-2xl py-2 text-white font-semibold">Done</button>
         </div>
-        <p>{{ transactionData }}</p>
     </div>
 </template>
     <script>
@@ -104,6 +103,7 @@
                 }
                 try {
                     const response = await axios.post("https://node-backend-446i.onrender.com/invoice", {
+                    // const response = await axios.post("http://localhost:8000/invoice", {
                         userData: this.userData,
                         companyData: this.companyData,
                         transactionData: this.transactionData,
