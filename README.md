@@ -1,5 +1,18 @@
 # Vue 3 + Vite
+In this project i have use Vuejs for frontend for styling i use Tailwind css for adding icon i use Veutify. 
+If you want to use that application you need to firstlly register your self after that you need to login you self.
+After login you will land on Dashboard page 
+Feature 
+1)Authentication :- Register, Login, Logout
+2)Create Invoice
+3)See Invoice
+4)Protect Invoice route
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+If you want to run locally you need to fire these command
+1) git clone (reposetry)
+2) npm i
+3) cd project_directory
+4) npm run dev (for run locally)
 
-Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://vuejs.org/guide/scaling-up/tooling.html#ide-support).
+I am working professional that's that's why i am not able to implement all feature and ui which you have provided me.
+Sorry for this
