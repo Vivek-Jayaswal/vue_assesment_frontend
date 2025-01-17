@@ -1,5 +1,5 @@
 <template>
-    <div class="w-[60%] py-10 px-10">
+    <div class="w-full lg:w-[80%] xl:w-[60%] py-10 px-5">
         <div class="w-full mb-5">
             <h1 class="text-2xl text-blue-600 font-medium pb-4">company details</h1>
             <form class="flex flex-col gap-5">
@@ -47,7 +47,7 @@
         <div class="w-full">
             <h1 class="text-2xl text-blue-600 font-medium pb-4">Inovice Details</h1>
             <form class="flex flex-col items-start gap-5">
-                <div class="w-[32%]">
+                <div class="w-full sm:w-[32%]">
                     <label for="payment-date">Payment Date : </label><br />
                     <input type="date" @input="clearError('paymentDateError')" v-model="userDetails.paymentDate"
                         class="w-full" placeholder="Select Date" name="paymentDate" id="payment-date">
@@ -61,7 +61,7 @@
                     <p class="text-xs text-red-600 pt-1" v-if="userDetailsError.userNameError">{{
                         userDetailsError.userNameError }}</p>
                 </div>
-                <div class="flex items-center gap-4 w-full">
+                <div class="flex items-center gap-2 sm:gap-4 w-full">
                     <div class="w-[32%]">
                         <label for="contact-number">Mobile No. : </label><br />
                         <input type="text" class="w-full" @input="clearError('userContactNumberError')"
@@ -79,7 +79,7 @@
                             userDetailsError.userMailError }}</p>
                     </div>
                 </div>
-                <div class="flex items-center gap-4 w-full">
+                <div class="flex items-center gap-2 sm:gap-4 w-full">
                     <div class="w-[33%]">
                         <label for="pincode">Pin Code : </label><br />
                         <input type="text" class="w-full" @input="clearError('pinCodeError')"

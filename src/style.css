@@ -2,14 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-form{
-    input{
+form {
+    input {
         border: 1px solid gray;
         border-radius: 5px;
         padding: 5px 10px;
     }
 
-    input:focus{
+    input:focus {
         outline: none;
     }
 }
@@ -18,22 +18,67 @@ body {
     background-color: #f6fafd;
 }
 
-.dynamic-table{
+.dynamic-table {
     border: 1px solid black;
 
-    th,td{
+    th,
+    td {
         border: 1px solid black;
-        padding: 10px;
+        padding: 2px;
         text-align: left;
     }
 
-    input{
+    input {
+        width: 100px;
         border: 1px solid gray;
         outline: none;
         padding: 5px;
         border-radius: 5px;
     }
-    
+
+}
+
+.logout-btn {
+    border: 1px solid red;
+    padding: 10px 30px;
+}
 
 
+
+@media only screen and (min-width : 1024px) {
+    .dynamic-table {
+        th,
+        td {
+            border: 1px solid black;
+            padding: 5px;
+            text-align: left;
+        }
+
+        input {
+            width:100px;
+            padding: 2px;
+        }
+    }
+}
+
+@media only screen and (min-width : 1536px) {
+    .dynamic-table {
+        th,
+        td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+
+        input {
+            width:auto;
+            padding: 5px;
+        }
+
+        .logout-btn {
+            width: 100%;
+            border: 1px solid red;
+            padding: 10px 40px;
+        }
+    }
 }

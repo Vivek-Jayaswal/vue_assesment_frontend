@@ -32,7 +32,7 @@ router.beforeEach(async (to, from, next) => {
   if (to.meta.requiresAuth) {
     try {
       const response = await axios.get(
-        "http://localhost:8000/auth/check-session",
+        "https://node-backend-446i.onrender.com/auth/check-session",
         { withCredentials: true }
       );
 
