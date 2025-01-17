@@ -61,6 +61,7 @@ export default {
             if (!this.emailError && !this.passwordError) {
                 try {
                     const response = await axios.post("https://node-backend-446i.onrender.com/login", {
+                    // const response = await axios.post("http://localhost:8000/login", {
                         email: this.email,
                         password: this.password,
                     },{

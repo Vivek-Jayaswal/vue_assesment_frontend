@@ -3,11 +3,11 @@
         <!-- Sidebar -->
         <div
             class="w-full lg:shadow-lg sticky top-0 z-10 left-0 lg:shadow-gray-400 gap-4 bg-white flex flex-start sm:items-center flex-col sm:flex-row lg:flex-col justify-between p-6 lg:h-screen">
-            <div class="flex flex-col items-start sm:flex-row lg:flex-col lg:items-start sm:items-center">
+            <div class="flex flex-col w-full items-start sm:flex-row lg:flex-col lg:items-start sm:items-center">
                 <div>
                     <img class="w-36 lg:w-52" src="../assets/codenicely_name_w_small@2x 1.jpg" alt="">
                 </div>
-                <div class="flex flex-col sm:flex-row lg:flex-col gap-2 items-start">
+                <div class="w-full flex flex-col sm:flex-row lg:flex-col gap-2 items-start">
                     <button class="w-full text-start py-3 font-semibold px-2">Team</button>
                     <button class="bg-blue-600 px-2 py-3 text-white font-semibold text-start w-full">Invoice</button>
                 </div>
@@ -74,7 +74,9 @@
                         <h3>Invoice #{{ invoice.invoiceNumber }}</h3>
                         <p><strong>Company:</strong> {{ invoice.companyData.companyName }}</p>
                         <p><strong>User:</strong> {{ invoice.userData.userName }}</p>
-                        <p><strong>Total:</strong> ₹{{ invoice.totalAmount }}</p>
+                        <div v-for="total in invoice.transactionData">
+                            <p><strong>Total:</strong> ₹{{ total.Total }}</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -91,6 +93,7 @@
                     :currentStep="currentStep" @invoiceCreated="resetStep" />
             </div>
         </div>
+
     </div>
 </template>
 
@@ -158,7 +161,14 @@ export default {
         async fetchInvoices() {
             try {
                 const response = await axios.get("https://node-backend-446i.onrender.com/get-all-data", { withCredentials: true });
-                this.invoices = response.data.data;
+                console.log(response.data.data);
+
+                if (response.data.data.length > 0) {
+                    this.invoices = response.data.data;
+                } else {
+                    this.invoices = []
+                }
+
             } catch (error) {
                 console.error("Error fetching invoices:", error);
             }
