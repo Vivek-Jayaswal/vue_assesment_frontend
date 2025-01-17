@@ -1,7 +1,8 @@
 <template>
     <div class="grid grid-cols-1 lg:grid-cols-[2fr_8fr]">
         <!-- Sidebar -->
-        <div class="w-full lg:shadow-lg sticky top-0 z-10 left-0 lg:shadow-gray-400 gap-4 bg-white flex flex-start sm:items-center flex-col sm:flex-row lg:flex-col justify-between p-6 lg:h-screen">
+        <div
+            class="w-full lg:shadow-lg sticky top-0 z-10 left-0 lg:shadow-gray-400 gap-4 bg-white flex flex-start sm:items-center flex-col sm:flex-row lg:flex-col justify-between p-6 lg:h-screen">
             <div class="flex flex-col items-start sm:flex-row lg:flex-col lg:items-start sm:items-center">
                 <div>
                     <img class="w-36 lg:w-52" src="../assets/codenicely_name_w_small@2x 1.jpg" alt="">
@@ -158,8 +159,6 @@ export default {
             try {
                 const response = await axios.get("https://node-backend-446i.onrender.com/get-all-data", { withCredentials: true });
                 this.invoices = response.data.data;
-                console.log("invoice data", this.invoices);
-
             } catch (error) {
                 console.error("Error fetching invoices:", error);
             }
